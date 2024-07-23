@@ -1,3 +1,3 @@
-# slide template
+# Project Approach
 
-A simple template repository that publishes to github pages.
+Using software development to make dull tasks interesting

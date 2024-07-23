@@ -1,6 +1,6 @@
-# slidev template
+# Talk: Project Approach
 
-This is a template repository to create a [slidev](https://sli.dev/) presentation deck.
+A [slidev](https://sli.dev/) presentation deck.
 
 ## Publishing
 
