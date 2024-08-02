@@ -24,3 +24,9 @@ Unlike traditional software, dull tasks have a clear finish line
 
 - Prefer to start with existing solutions
 - Focus on getting to done quickly
+
+---
+
+# Case Study
+
+`ctaylor-resume` - project used to generate my **resume.pdf**
