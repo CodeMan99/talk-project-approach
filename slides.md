@@ -26,6 +26,9 @@ Unlike traditional software, dull tasks have a clear finish line
 - Focus on getting to done quickly
 
 ---
+layout: image-right
+image: /static/resume-v0001-2018.png
+---
 
 # Case Study
 
