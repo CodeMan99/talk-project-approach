@@ -5,4 +5,7 @@ RUN apt-get -y update \
  && DEBIAN_FRONTEND=noninteractive apt-get -y install \
       aspell \
       inetutils-ping \
+      moreutils \
  && rm -rf /var/lib/apt/lists/*
+
+RUN su node -c "npm install -g imagemin-cli imagemin-pngquant"
