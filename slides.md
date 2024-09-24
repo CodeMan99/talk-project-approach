@@ -164,6 +164,18 @@ Reading the original action, revealing that it made use of
 
 # Action: Local CD, Part III
 
+I stopped developing for a moment to look broadly at other solutions.
+
+### What I found is the _Reactive Resume_ project!
+
+Achieves a lot of my personal goals.
+
+- Simple text input
+- Render to HTML
+- Export / Print to PDF
+
+The PDF bit was a perfect fit for what I needed next.
+
 ---
 
 # Action: Local CD, Part IV
@@ -192,9 +204,30 @@ Now I just call `./print-pdf` and I receive a fully optimized `resume.pdf`.
 Don't worry! I now have `devcontainer/ci` action that can execute anything!
 
 ---
+layout: image
+image: /static/resume-v0002-2024.png
+backgroundSize: contain
+---
+
+<!-- Explain development -->
+
+---
 
 # Other Resume Solutions
 
-Don't want to roll your own? Use [Reactive Resume](https://rxresu.me/).
+Don't want to roll your own?
 
 ![QR Code containing Reactive Resume URL](/static/reactive-resume-qrcode.png)
+Reactive Resume &mdash; [https://rxresu.me](https://rxresu.me/)
+
+---
+layout: two-cols
+---
+
+![QR Code containing LinkedIn URL](/static/codeman99-linkedin-qrcode.png)
+[linkedin.com/in/codeman99/](https://www.linkedin.com/in/codeman99/)
+
+::right::
+
+![QR Code containing Github URL](/static/codeman99-github-qrcode.png)
+[github.com/CodeMan99](https://github.com/CodeMan99)
