@@ -1,6 +1,6 @@
 # Project Approach
 
-Using software development to finish dull tasks
+Using software development to finish dull tasks.
 
 ---
 
@@ -16,7 +16,7 @@ layout: fact
 
 # Done
 
-Unlike traditional software, dull tasks have a clear finish line
+Unlike traditional software, dull tasks have a clear finish line.
 
 ---
 layout: image-right
@@ -31,7 +31,7 @@ image: /static/resume-v0001-2018.png
 
 # Why DIY
 
-Various reasons why I rolled my open solution.
+Various reasons why I rolled my own solution.
 
 - Tired of fighting with Microsoft Office styling.
 - Wanted a file format that could convert easily.
@@ -49,20 +49,152 @@ Various reasons why I rolled my open solution.
 
 ---
 
-# Project Start
+# Action: Project Start
 
-My resume project start with **Pug** templates v1. Building with the `pug` cli.
+My resume project start with **Pug** templates.
+
+By leaning on the `pug` CLI, I was able to get to _done_ almost instantly.
 
 <!-- I did learn CSS `display: flex` which I leverage for the column output -->
 
 ---
 
-# Upgrades
+# Tips: Continue Learning
 
-Practice keeping up-to-date and adapting as necessary over time.
+- Helps to keep the project feeling fresh.
+- A sandbox to freely make mistakes.
 
 <!--
-For example, when pug v3 came out, the CLI was no where to be found.
-
-I replaced it with a simple node.js script + the npm `reload` library.
+Making mistakes is very benefinial to learning.
 -->
+
+---
+
+# Action: Replace Pug CLI
+
+The Pug CLI was eventually deprecated.
+
+This forced my hand in writing my own.
+
+What I learned is that parsing option flags doesn't have to be hard.
+
+<!--
+Reminder that files starting with a shell bang line should **not** have an extension.
+-->
+
+---
+
+# Action: Add Devcontainer
+
+---
+
+# Action: Add Build Watch
+
+<!--
+`inotify` - Watch source files to build on change.
+`reload` - Watch output files to reload web browser.
+-->
+
+---
+
+# Action: Use GH Actions
+
+Use of Github Actions allowed me to offload concerns.
+
+This enabled meaningful edits while away from my development machine.
+
+<!--
+First solution was to store the rendered PDF as a _build artifact_.
+
+Made use of LukaszLapaj/html-to-pdf-action@e4d6f4f8d68d7a69b8a096613336f9b1edd4b314
+-->
+
+---
+
+# Failure: Delivery as OCI Artifact
+
+The goal here was to allow distribution of my resume publically.
+
+- Announced it on LinkedIn.
+- Added to my Github profile.
+- Over the last 5 months I received roughly 15 downloads.
+
+<!--
+Named: ghcr.io/codeman99/resume:latest
+
+The boon is that I understand OCI Artifacts now!
+-->
+
+---
+
+# Action: Reload Server
+
+I decided to re-write the `reload` server for learning.
+
+- Able to combine file watching!
+- Had fun writing a WebSocket server (node)
+- Had fun writing a WebSocket client (browser)
+
+---
+
+# Action: Local CD, Part I
+
+I deperately wanted to replace the _HTML to PDF_ action I choose.
+
+```
+LukaszLapaj/html-to-pdf-action@e4d6f4f8d68d7a69b8a096613336f9b1edd4b314
+```
+
+See that commit hash? It means that my action has to build the container image.
+
+---
+
+# Action: Local CD, Part II
+
+Replacing this action took a bit of planning.
+
+Reading the original action, revealing that it made use of
+
+- Docker
+- A `serve-static` node server
+- Puppeteer
+- Chrome that is manually install in the docker image
+
+---
+
+# Action: Local CD, Part III
+
+---
+
+# Action: Local CD, Part IV
+
+Plan was in place!
+
+1. Replace Docker with a devcontainer. ...Yes, that's still just docker.
+2. Replace `serve-static` with an alpine-based `nginx` container.
+3. Learn puppeteer!
+4. Replace Chrome with the `browserless/chromium`.
+
+Lesson Learned: The fastest docker build? No build!
+
+---
+
+# Action: Local CD, Part V
+
+Finally! Creating a PDF locally both looks good and is automated!
+
+Now I just call `./print-pdf` and I receive a fully optimized `resume.pdf`.
+
+---
+
+# What About Github
+
+Don't worry! I now have `devcontainer/ci` action that can execute anything!
+
+---
+
+# Other Resume Solutions
+
+Don't want to roll your own? Use [Reactive Resume](https://rxresu.me/).
+
+![QR Code containing Reactive Resume URL](/static/reactive-resume-qrcode.png)
