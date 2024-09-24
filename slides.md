@@ -42,7 +42,7 @@ Various reasons why I rolled my own solution.
 
 - Prefer to start with existing solutions.
 - Focus on getting to done quickly.
-- Choose familar tech.
+- Choose familiar tech.
 - Operate in plain text.
 
 <!-- Often the hardest part of any project is just getting started. -->
