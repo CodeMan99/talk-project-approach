@@ -20,7 +20,7 @@ Unlike traditional software, dull tasks have a clear finish line.
 
 ---
 layout: image-right
-image: /static/resume-v0001-2018.png
+image: /resume-v0001-2018.png
 ---
 
 # Case Study
@@ -205,7 +205,7 @@ Don't worry! I now have `devcontainer/ci` action that can execute anything!
 
 ---
 layout: image
-image: /static/resume-v0002-2024.png
+image: /resume-v0002-2024.png
 backgroundSize: contain
 ---
 
@@ -217,17 +217,17 @@ backgroundSize: contain
 
 Don't want to roll your own?
 
-![QR Code containing Reactive Resume URL](/static/reactive-resume-qrcode.png)
+![QR Code containing Reactive Resume URL](/reactive-resume-qrcode.png)
 Reactive Resume &mdash; [https://rxresu.me](https://rxresu.me/)
 
 ---
 layout: two-cols
 ---
 
-![QR Code containing LinkedIn URL](/static/codeman99-linkedin-qrcode.png)
+![QR Code containing LinkedIn URL](/codeman99-linkedin-qrcode.png)
 [linkedin.com/in/codeman99/](https://www.linkedin.com/in/codeman99/)
 
 ::right::
 
-![QR Code containing Github URL](/static/codeman99-github-qrcode.png)
+![QR Code containing Github URL](/codeman99-github-qrcode.png)
 [github.com/CodeMan99](https://github.com/CodeMan99)
