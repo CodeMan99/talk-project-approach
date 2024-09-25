@@ -3,6 +3,8 @@
 Using software development to finish dull tasks.
 
 ---
+layout: center
+---
 
 # The Dull Tasks
 
@@ -25,7 +27,11 @@ image: /resume-v0001-2018.png
 
 # Case Study
 
-`ctaylor-resume` - project used to generate my **resume.pdf**
+<codicon-github-project /> `CodeMan99/ctaylor-resume`
+
+Project used to generate my **resume.pdf**
+
+Screenshot of an early iteration <bi-arrow-right />
 
 ---
 
@@ -45,7 +51,9 @@ Various reasons why I rolled my own solution.
 - Choose familiar tech.
 - Operate in plain text.
 
-<!-- Often the hardest part of any project is just getting started. -->
+<!--
+Often the hardest part of any project is just getting started.
+-->
 
 ---
 
@@ -55,7 +63,9 @@ My resume project start with **Pug** templates.
 
 By leaning on the `pug` CLI, I was able to get to _done_ almost instantly.
 
-<!-- I did learn CSS `display: flex` which I leverage for the column output -->
+<!--
+I did learn CSS `display: flex` which I leverage for the column output
+-->
 
 ---
 
@@ -86,13 +96,28 @@ Reminder that files starting with a shell bang line should **not** have an exten
 
 # Action: Add Devcontainer
 
+A devcontainer is a docker wrapper.
+
+A bit of an experiment at the time.
+
+Now my favorite way to create a development environment.
+
 ---
 
 # Action: Add Build Watch
 
-<!--
+Tools to enable hot reload of my build
+
 `inotify` - Watch source files to build on change.
+
 `reload` - Watch output files to reload web browser.
+
+<!--
+Simple and effective.
+
+Shell script.
+
+A little wonky because there may have been some race conditions. A manual reload of the browser typically was enough.
 -->
 
 ---

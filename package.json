@@ -10,6 +10,9 @@
     "spellcheck": "aspell --mode=markdown check slides.md"
   },
   "dependencies": {
+    "@iconify-json/bi": "^1.2.0",
+    "@iconify-json/codicon": "^1.2.0",
+    "@iconify-json/devicon": "^1.2.2",
     "@slidev/cli": "^0.49.29",
     "@slidev/theme-default": "latest",
     "@slidev/theme-seriph": "latest",
