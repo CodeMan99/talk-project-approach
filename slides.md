@@ -82,6 +82,8 @@ I did learn CSS `display: flex` which I leverage for the column output
 
 # Tips: Continue Learning
 
+<bi-journal-bookmark-fill />
+
 - Helps to keep the project feeling fresh.
 - A sandbox to freely make mistakes.
 
@@ -119,9 +121,19 @@ Now my favorite way to create a development environment.
 
 Tools to enable hot reload of my build
 
-`inotify` - Watch source files to build on change.
+`inotify` - <codicon-bell /> Watch source files to build on change.
 
-`reload` - Watch output files to reload web browser.
+`reload` - <codicon-refresh /> Watch output files to reload web browser.
+
+```
+#!/usr/bin/env bash
+
+FILENAME="resume.pug"
+
+printf "Watching %s.\n" "$FILENAME"
+./generate && npm exec -c "reload --start-page resume.html" &
+while inotifywait -e close_write "$FILENAME"; do ./generate; done
+```
 
 <!--
 Simple and effective.
@@ -134,6 +146,8 @@ A little wonky because there may have been some race conditions. A manual reload
 ---
 
 # Action: Use GH Actions
+
+<devicon-githubactions />
 
 Use of Github Actions allowed me to offload concerns.
 
@@ -175,6 +189,8 @@ I decided to re-write the `reload` server for learning.
 
 # Action: Local CD, Part I
 
+<vscode-icons-file-type-htmlvalidate /> <bi-caret-right /> <vscode-icons-file-type-pdf2 />
+
 I deperately wanted to replace the _HTML to PDF_ action I choose.
 
 ```
@@ -187,20 +203,25 @@ See that commit hash? It means that my action has to build the container image.
 
 # Action: Local CD, Part II
 
-Replacing this action took a bit of planning.
+<bi-patch-exclamation /> Replacing this action took a bit of planning.
 
 Reading the original action, revealing that it made use of
 
-- Docker
-- A `serve-static` node server
-- Puppeteer
-- Chrome that is manually install in the docker image
+- <devicon-docker /> Docker
+- <devicon-nodejs /> A `serve-static` node server
+- <devicon-puppeteer /> Puppeteer
+- <devicon-chrome /> A manual `apt-get install` of Chrome in the Docker image
+
+<style>
+    ul { list-style-type: none; }
+    li { margin-left: 0; }
+</style>
 
 ---
 
 # Action: Local CD, Part III
 
-I stopped developing for a moment to look broadly at other solutions.
+I stopped developing for a moment to look broadly at other solutions. <bi-pause-circle />
 
 ### What I found is the _Reactive Resume_ project!
 
@@ -221,7 +242,7 @@ Plan was in place!
 1. Replace Docker with a devcontainer. ...Yes, that's still just docker.
 2. Replace `serve-static` with an alpine-based `nginx` container.
 3. Learn puppeteer!
-4. Replace Chrome with the `browserless/chromium`.
+4. Replace Chrome with the `ghcr.io/browserless/chromium` image.
 
 Lesson Learned: The fastest docker build? No build!
 
@@ -229,7 +250,7 @@ Lesson Learned: The fastest docker build? No build!
 
 # Action: Local CD, Part V
 
-Finally! Creating a PDF locally both looks good and is automated!
+<codicon-home /> Finally! Creating a PDF locally both looks good and is automated!
 
 Now I just call `./print-pdf` and I receive a fully optimized `resume.pdf`.
 
@@ -237,12 +258,15 @@ Now I just call `./print-pdf` and I receive a fully optimized `resume.pdf`.
 
 # What About Github
 
+<codicon-github-inverted />
+
 Don't worry! I now have `devcontainer/ci` action that can execute anything!
 
 ---
 layout: image
 image: /resume-v0002-2024.png
 backgroundSize: contain
+title: Project Screenshot
 ---
 
 <!-- Explain development -->
