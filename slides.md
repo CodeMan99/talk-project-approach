@@ -95,6 +95,11 @@ layout: center
 - Job search
 - Paying bills
 
+<!--
+RMcNeely => my only question is what are "dull tasks" and do they have to do with this talk?
+Cody => For me that's anything required in life, probably repetitive, and not enjoyable with a typical approach.
+-->
+
 ---
 layout: fact
 ---
