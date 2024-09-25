@@ -59,7 +59,18 @@ Often the hardest part of any project is just getting started.
 
 # Action: Project Start
 
-My resume project start with **Pug** templates.
+<vscode-icons-file-type-pug />
+
+My resume project started with **Pug** templates.
+
+```
+doctype html
+head
+  title Example
+body
+  main.container
+    p I like Pug templates
+```
 
 By leaning on the `pug` CLI, I was able to get to _done_ almost instantly.
 
