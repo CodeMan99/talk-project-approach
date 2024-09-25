@@ -1,3 +1,12 @@
+---
+theme: default
+title: Project Approach
+author: Cody Taylor
+lineNumbers: true
+fonts:
+  mono: Jetbrains Mono
+---
+
 # Project Approach
 
 Using software development to finish dull tasks.
